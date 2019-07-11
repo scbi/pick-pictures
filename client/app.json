@@ -1,14 +1,44 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/jiance/jiance",
+    "pages/huaxiang/huaxiang",
+    "pages/xuantu/xuantu",
+    "pages/shouye/shouye",
+    "pages/geren /geren"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "人脸识别Demo",
+    "navigationBarTitleText": "PP",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#ffd426",
+    "selectedColor": "#ff9831",
+    "borderStyle": "black",
+    "backgroundColor": "#313131",
+    "list": [
+      {
+        "pagePath": "pages/jiance/jiance",
+        "iconPath": "libs/img/jiance_i.png",
+        "selectedIconPath": "libs/img/xuanzhong_i.png",
+        "text": "检测"
+      },
+      {
+        "pagePath": "pages/xuantu/xuantu",
+        "iconPath": "libs/img/xuantu_i.png",
+        "selectedIconPath": "libs/img/xuanzhong_i.png",
+        "text": "历史"
+      },
+      {
+        "pagePath": "pages/huaxiang/huaxiang",
+        "iconPath": "libs/img/huaxiang_i.png",
+        "selectedIconPath": "libs/img/xuanzhong_i.png",
+        "text": "画像"
+      }
+    ]
   },
   "cloud": true,
   "sitemapLocation": "sitemap.json"

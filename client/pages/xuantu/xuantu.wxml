@@ -1,0 +1,6 @@
+<!--client/pages/xuantu/xuantu.wxml-->
+<image src='cloud://test-7sj42.7465-test-7sj42/img/bg.png' class='bg'></image>
+<view class='predv' style="display:{{display}};"><text class='pred'>{{prediction}}</text>
+<image src='{{img_src}}' style="width: 250px; height: {{img_height}}px;"></image>
+</view>
+<button bindtap='history' class='btn'>点击刷新</button>

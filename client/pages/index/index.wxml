@@ -9,7 +9,6 @@
 <view class='button_viwe_size'>
   <button type="default" size="mini" bindtap="DetectFace" style="display:{{button_viwe_display}}">人脸检测</button>
   <button type="primary" size="mini" bindtap="AnaltzeFace" style="display:{{button_viwe_display}}">五官定位</button>
-  <button type="warn" size="mini" bindtap="FaceMerge" style="display:{{button_viwe_display}}">人脸融合</button>
 </view>
 <view class='progress_view_size'>
 <text class="text_size">{{UpdateImage}}</text>

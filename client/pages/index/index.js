@@ -79,46 +79,7 @@ Page({
     })
   },
 
-  FaceMerge() { //人脸融合函数
-    wx.showLoading({
-      title: '请稍后...',
-    });
-    var myThis = this
-    myThis.setData({
-      text_viwe_display: "none" //取消显示人脸检测数据
-    });
-    var image_src = this.data.ImagetempFilePaths //将选择图片后临时地址传入image_src变量
-    wx.getFileSystemManager().readFile({
-      filePath: image_src, //选择图片返回的相对路径
-      encoding: 'base64', //设置编码格式为base64
-      success(base64_res) {
-        wx.cloud.callFunction({ //调用人脸融合云函数
-          name: "FaceMerge",
-          data: {
-            base64: base64_res.data //将图片的base64数据传给云函数
-          },
-          success(cloud_callFunction_res) { //云函数成功回调
-            wx.hideLoading()
-            console.log(cloud_callFunction_res)
-            myThis.setData({
-              canvas_height: 253,
-              image_src: cloud_callFunction_res.result.Image, //cloud_callFunction_res.result.Image为云函数返回的人脸融合后的图片
-              image_viwe_display: "block", //打开前端图片展示
-              canvas_viwe_display: "none", //关闭前端canvas展示
-            })
-          },
-          fail(err) {
-            console.log(err) //云函数失败回调，控制台打印log
-            wx.hideLoading()
-            wx.showModal({
-              title: '失败',
-              content: "人脸融合失败，请重试！"
-            })
-          }
-        })
-      }
-    })
-  },
+  
 
   AnaltzeFace() { //五官定位函数
     wx.showLoading({
